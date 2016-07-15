@@ -1,0 +1,4 @@
+"Scripts not permitted to use method" in Jenkins Workflow
+Worked around by going to Manage Jenkins -> In-process Script Approval, and clicking on "Approve" button for invokeMethod.
+Weird, but worked!
+(https://issues.jenkins-ci.org/browse/JENKINS-30432)
