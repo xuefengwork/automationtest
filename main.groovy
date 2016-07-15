@@ -5,12 +5,14 @@ node {
 
   stage 'TEST execute sh file'
       println 'hello fxue, this is checkout.'
-      sh './hello.sh'
+
       env["WORKSPACE"]=pwd()
       def properties_pipeline_general = readProperties file: './pipeline.properties'
       for ( e in properties_pipeline_general ) {
           env[e.key] = e.value
       }
+
+      sh './hello.sh'
 
   stage 'Post Test'
     println 'this is post test task.'
