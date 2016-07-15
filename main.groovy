@@ -5,7 +5,7 @@ node {
 
   stage 'TEST execute sh file'
       println 'hello fxue, this is checkout.'
-      //sh './hello.sh'
+      sh './hello.sh'
 
   stage 'Post Test'
     println 'this is post test task.'
