@@ -7,10 +7,11 @@ node {
       println 'hello fxue, this is checkout.'
       sh './hello.sh'
       env["WORKSPACE"]=pwd()
-      def properties_pipeline_general = readProperties file: 'pipeline.properties'
-      for ( e in properties_pipeline_general ) {
-          env[e.key] = e.value
-      }
+      // def properties_pipeline_general = readProperties file: './pipeline.properties'
+      // for ( e in properties_pipeline_general ) {
+      //     env[e.key] = e.value
+      // }
+      
       println env
 
   stage 'Post Test'
